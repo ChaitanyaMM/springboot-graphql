@@ -1,0 +1,17 @@
+type Vehicle{
+    id: ID!,
+	carBrand: String!,
+	modelType: String!,
+	registrationNumber: String!,
+	rcNumber: String!,
+	fuelType: String!
+}
+
+type Mutation {
+       createVehicle(carBrand: String!,modelType: String!,registrationNumber: String!,rcNumber: String!,fuelType: String!): Vehicle
+ }
+ 
+ type Query {
+	findAll:[Vehicle]
+	findById(id: ID!):Vehicle
+}
